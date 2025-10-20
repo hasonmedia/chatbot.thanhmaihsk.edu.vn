@@ -127,7 +127,9 @@ const App = () => {
                 } />
                 <Route path="/viewer/chat" element={
                     <ProtectedRoute allowedRoles={["viewer"]}>
-                        <ChatPage />
+                        <ViewerLayout>
+                            <ChatPage />
+                        </ViewerLayout>
                     </ProtectedRoute>
                 } />
                 <Route path="/viewer/profile" element={
