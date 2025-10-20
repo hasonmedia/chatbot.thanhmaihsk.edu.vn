@@ -3,7 +3,7 @@ const Url = `https://chatbotbe.thanhmaihsk.edu.vn`;
 // const Url = `http://localhost:8000`;
 const REDIRECT_URI = `${Url}/facebook-pages/callback`;
 
-const FB_SCOPE = "pages_show_list,pages_manage_metadata,pages_read_engagement,pages_messaging,email";
+const FB_SCOPE = "pages_show_list,pages_manage_metadata,pages_read_engagement,pages_messaging";
 
 export default function LoginWithFb() {
     const handleLogin = () => {
