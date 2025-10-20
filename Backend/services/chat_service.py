@@ -411,11 +411,11 @@ async def send_message_fast_service(data: dict, user, db):
         name_to_send = session_data["name"][2:]
             
         if session_data["channel"] == "facebook":
-            send_fb(session_data["page_id"], name_to_send, response_messages[0], data.get("image"), db)
+            await send_fb(session_data["page_id"], name_to_send, response_messages[0], data.get("image"), db)
         elif session_data["channel"] == "telegram":
-            send_telegram(name_to_send, response_messages[0], db)
+            await send_telegram(name_to_send, response_messages[0], db)
         elif session_data["channel"] == "zalo":
-            send_zalo(name_to_send, response_messages[0], data.get("image"), db)
+            await send_zalo(name_to_send, response_messages[0], data.get("image"), db)
             
         return response_messages
     
@@ -1419,11 +1419,11 @@ async def send_message_page_service(data: dict, db):
         # Gửi trả lời dựa trên platform tương ứng
         try:
             if data["platform"] == "facebook":
-                send_fb(data.get("page_id"), data["sender_id"], bot_message, None, db)
+                await send_fb(data.get("page_id"), data["sender_id"], bot_message, None, db)
             elif data["platform"] == "telegram":
-                send_telegram(data["sender_id"], bot_message, db)
+                await send_telegram(data["sender_id"], bot_message, db)
             elif data["platform"] == "zalo":
-                send_zalo(data["sender_id"], bot_message, None, db)
+                await send_zalo(data["sender_id"], bot_message, None, db)
             else:
                 # Unknown platform — just log
                 print(f"⚠️ Unknown platform for outgoing reply: {data.get('platform')}")
