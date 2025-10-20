@@ -37,8 +37,8 @@ async def delete_page(page_id: int, db: AsyncSession = Depends(get_db)):
     return await facebook_page_controller.delete_page_controller(page_id, db)    
 
 
-FB_CLIENT_ID = "4238615406374117"
-FB_CLIENT_SECRET = "47d60fe20efd7ce023c35380683ba6ef"
+FB_CLIENT_ID = "762977926791763"
+FB_CLIENT_SECRET = "93a66767adfd4dfa9a39127c37d9b0da"
 
 # FB_CLIENT_ID = "1130979465654370"
 # FB_CLIENT_SECRET = "dda15803ebe7785219a19f1a2823d777"

@@ -1,4 +1,4 @@
-const FB_APP_ID = "4238615406374117";
+const FB_APP_ID = "762977926791763";
 const Url = `https://chatbotbe.thanhmaihsk.edu.vn`;
 // const Url = `http://localhost:8000`;
 const REDIRECT_URI = `${Url}/facebook-pages/callback`;
