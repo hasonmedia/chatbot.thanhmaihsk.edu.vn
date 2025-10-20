@@ -61,7 +61,9 @@ const App = () => {
                 } />
                 <Route path="/chat" element={<Messager_home />} />
                 <Route path="/admin/chat" element={<ProtectedRoute allowedRoles={["admin", "root", "superadmin"]}>
-                    <Messager_admin />
+                    <MainLayout>
+                        <Messager_admin />
+                    </MainLayout>
                 </ProtectedRoute>} />
                 <Route path="/admin/users" element={<ProtectedRoute allowedRoles={["root", "superadmin", "admin"]}>
                     <MainLayout>
