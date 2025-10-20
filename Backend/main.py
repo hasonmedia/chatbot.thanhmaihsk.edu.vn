@@ -51,8 +51,6 @@ app.include_router(robots.router)
 # CORS Configuration - Không được dùng wildcard (*) khi allow_credentials=True
 origins = [
     "https://chatbot.thanhmaihsk.edu.vn"
-    "http://localhost:5173",       # Frontend local development
-    "http://localhost:3000",       # Alternative local port
 ]
 
 app.add_middleware(
